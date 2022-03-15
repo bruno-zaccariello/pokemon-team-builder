@@ -12,7 +12,7 @@ export class PokemonViewerComponent implements OnInit {
   public pokemons!: Pokemon[];
 
   private filters: PokemonFilter = {
-    limit: 151,
+    limit: 15,
   };
 
   constructor(public pokemonService: PokemonService) {}
