@@ -1,3 +1,3 @@
-# node-5nj448
+# Pokemon Team Builder
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/node-5nj448)
+Angular project designed for starters with Angular Testing.
