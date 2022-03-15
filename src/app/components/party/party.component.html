@@ -1,0 +1,10 @@
+<div class="pokemon-party">
+  <div class="pokemon-party-header">
+    <h2>Meu time</h2>
+  </div>
+  <pokemon
+    *ngFor="let pokemon of pokemons"
+    [pokemon]="pokemon"
+    [editable]="true"
+  ></pokemon>
+</div>

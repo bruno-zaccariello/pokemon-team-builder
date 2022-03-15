@@ -1,0 +1,48 @@
+<div class="poke-card">
+  <ng-container *ngIf="!loading">
+    <div class="poke-card-image">
+      <img [src]="pokemon.sprites.front_default" />
+    </div>
+
+    <div class="poke-card-name">
+      <div *ngIf="!editMode"
+        class="title-grid">
+        <h3>
+          {{ pokemon?.nickname || pokemon?.name }}
+        </h3>
+
+        <i *ngIf="editable && !editMode"
+          (click)="toggleEdit()"
+          class="fa-solid fa-pen edit"></i>
+      </div>
+
+      <div [hidden]="!editMode"
+        class="title-input-grid">
+        <input #nicknameinput
+          type="text" />
+
+        <i *ngIf="editable && editMode"
+          (click)="editNickname(nicknameinput.value)"
+          class="fa-solid fa-check edit-save"></i>
+
+        <i *ngIf="editable && editMode"
+          (click)="toggleEdit()"
+          class="fa-regular fa-circle-xmark edit-cancel"></i>
+      </div>
+    </div>
+
+    <div class="poke-card-types">
+      <small *ngFor="let type of pokemon.types">{{ type.type.name }}</small>
+    </div>
+
+    <div class="poke-card-opts">
+      <i (click)="addToParty()"
+        *ngIf="!editable && !partyService.partyFull"
+        class="fa-solid fa-plus add"></i>
+
+      <i (click)="removeFromParty()"
+        *ngIf="editable && !partyService.partyEmpty"
+        class="fa-solid fa-minus remove"></i>
+    </div>
+  </ng-container>
+</div>
