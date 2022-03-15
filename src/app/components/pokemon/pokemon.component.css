@@ -1,0 +1,148 @@
+.poke-card {
+  background-color: lightsteelblue;
+
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: max-content auto 44px;
+  grid-template-areas: "image name opts" "image type opts";
+  grid-gap: 0.5rem;
+
+  min-width: 290px;
+  height: 100px;
+}
+
+.poke-card-image {
+  position: relative;
+  grid-area: image;
+
+  aspect-ratio: 1;
+  width: 100px;
+}
+
+.poke-card-image img {
+  position: absolute;
+  inset: 0 0 0 0;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+
+  aspect-ratio: 1;
+  width: 80%;
+}
+
+.poke-card-name {
+  text-transform: capitalize;
+  grid-area: name;
+}
+
+.poke-card-name input {
+  width: 100%;
+}
+
+.poke-card-name h3 {
+  margin: 0.5em 0px;
+  padding: 0;
+
+  text-align: center;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title-grid {
+  display: grid;
+  grid-template-columns: 1fr 2em;
+}
+
+.title-input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5em 1.5em;
+
+  margin-top: 1em;
+}
+
+.poke-card-name .title-grid i,
+.poke-card-name .title-input-grid i {
+  margin: auto;
+}
+
+.poke-card-types {
+  grid-area: type;
+
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.25rem;
+
+  text-align: start;
+}
+
+.poke-card-types small {
+  border: 1px solid rgba(106, 90, 205, 0.6);
+  border-radius: 5px;
+
+  background-color: rgba(100%, 100%, 100%, 0.6);
+
+  cursor: default;
+
+  padding: 2px;
+
+  text-transform: uppercase;
+
+  font-weight: 800;
+  height: min-content;
+}
+
+.poke-card-opts {
+  grid-area: opts;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  gap: 1em;
+}
+
+i {
+  margin-inline: auto;
+
+  cursor: pointer;
+}
+
+i.add,
+i.edit-save {
+  color: lightgreen;
+}
+
+i.add:hover,
+i.edit-save:hover {
+  color: mediumaquamarine;
+}
+
+i.remove {
+  color: red;
+}
+
+i.remove:hover {
+  color: crimson;
+}
+
+i.edit {
+  font-size: 1rem;
+  margin-left: 0.5em;
+  color: gold;
+}
+
+i.edit:hover {
+  color: palegoldenrod;
+}
+
+i.edit-cancel {
+  margin-left: 0.5em;
+  color: black;
+}
+
+i.edit-cancel:hover {
+  color: darkslategray;
+}

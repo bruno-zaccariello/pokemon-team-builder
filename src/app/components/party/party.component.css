@@ -1,0 +1,26 @@
+.pokemon-party {
+  background-color: darkgray;
+  border: 1em solid slategray;
+  border-radius: 2em;
+
+  padding: 1em 2em 2em;
+
+  display: grid;
+
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 1em;
+
+  min-width: 40em;
+  width: 800px;
+}
+
+.pokemon-party-header {
+  grid-column: span 2;
+}
+
+.pokemon-party-header h2 {
+  margin: auto;
+  text-align: center;
+}
